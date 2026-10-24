@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8eee7">
+  <title>BloomWithin | Women's Health & Wellbeing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="BloomWithin home"><span class="brand-mark">✿</span><span>Bloom<span class="brand-light">Within</span><small>YOUR HEALTH, YOUR STORY</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a href="#home" data-page="home">Home</a>
+      <a href="#tracker" data-page="tracker">Tracker</a>
+      <a href="#routine" data-page="routine">Mini-game</a>
+      <a href="#pcos" data-page="pcos">PCOS</a>
+      <a href="#menopause" data-page="menopause">Menopause</a>
+      <a href="#wellbeing" data-page="wellbeing">Wellbeing</a>
+      <a href="#summary" data-page="summary">Summary</a>
+      <a href="#remo" data-page="remo">Remo</a>
+    </nav>
+    <label class="language-label">Language
+      <select id="languageSelect" aria-label="Choose language">
+        <option value="en">English</option>
+        <option value="ta">தமிழ் (coming soon)</option>
+      </select>
+    </label>
+  </header>
+
+  <main>
+    <section class="page active" id="home" data-title="Welcome to BloomWithin">
+      <div class="hero section-wrap">
+        <div class="hero-copy">
+          <span class="eyebrow">A GENTLER WAY TO UNDERSTAND YOUR BODY</span>
+          <h1>Understand your body.<br><em>Nurture your wellbeing.</em></h1>
+          <p>A calm space to learn about women's health, notice patterns, and prepare for conversations with a qualified healthcare professional.</p>
+          <div class="hero-actions">
+            <a class="button" href="#tracker">Start tracking →</a>
+            <a class="text-link" href="#routine">Try the mini-game ↗</a>
+          </div>
+          <p class="demo-note">● Demo mode — use fictional information only.</p>
+        </div>
+        <div class="hero-art" aria-label="Decorative flower illustration"><span class="sun">☼</span><span class="flower">✿</span><span class="sparkle s1">✦</span><span class="sparkle s2">✧</span><span class="art-caption">grow at your own pace</span></div>
+      </div>
+      <div class="section-wrap intro-grid">
+        <article class="info-card"><span>♡</span><h3>Notice patterns</h3><p>Record what you experience, in your own words.</p></article>
+        <article class="info-card"><span>✧</span><h3>Learn with care</h3><p>Explore educational information without self-diagnosing.</p></article>
+        <article class="info-card"><span>☘</span><h3>Prepare for care</h3><p>Organise questions to discuss with a healthcare professional.</p></article>
+      </div>
+      <div class="section-wrap home-next">
+        <p class="eyebrow">YOUR WELLBEING TOOLKIT</p><h2>Small steps, at your pace.</h2>
+        <div class="tile-grid">
+          <a class="tile" href="#tracker"><span>01 · DAILY AWARENESS</span><h3>Symptom tracker</h3><p>Keep a simple record of dates and impact.</p><b>Open section ↗</b></a>
+          <a class="tile" href="#routine"><span>02 · PLAY & LEARN</span><h3>Daily routine mini-game</h3><p>Explore habits and learn through quick questions.</p><b>Open section ↗</b></a>
+          <a class="tile" href="#pcos"><span>03 · LEARN & UNDERSTAND</span><h3>PCOS awareness</h3><p>Explore common signs and when to seek advice.</p><b>Open section ↗</b></a>
+          <a class="tile" href="#menopause"><span>04 · LIFE STAGES</span><h3>Menopause care</h3><p>Learn about common changes and available support.</p><b>Open section ↗</b></a>
+          <a class="tile" href="#wellbeing"><span>05 · CHECK IN WITH YOU</span><h3>Emotional wellbeing</h3><p>Pause for a mood check-in and gentle reflection.</p><b>Open section ↗</b></a>
+          <a class="tile" href="#remo"><span>07 · ASK & REFLECT</span><h3>Meet Remo</h3><p>Try the educational demo assistant.</p><b>Open section ↗</b></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="page section-wrap" id="tracker" data-title="Symptom tracker">
+      <div class="page-heading"><p class="eyebrow">01 · PERSONAL AWARENESS</p><h1>Symptom tracker</h1><p>Practise recording a concern. Your demo entries stay in this browser on this device.</p></div>
+      <form id="trackerForm" class="panel">
+        <h2>Add a demo entry</h2>
+        <div class="form-grid">
+          <label>Date <input id="entryDate" type="date" required></label>
+          <label>Your name (optional) <input id="personName" type="text" maxlength="60" placeholder="Demo name only"></label>
+          <label>Age (optional) <input id="personAge" type="number" min="13" max="100" placeholder="Age"></label>
+          <label>Symptom or concern
+            <select id="symptom" required>
+              <option value="">Choose one</option><option>Period changes</option><option>Acne or oily skin</option><option>Hair or skin changes</option><option>Sleep changes</option><option>Mood or stress</option><option>Hot flashes or night sweats</option><option>Energy changes</option><option>Other / not sure</option>
+            </select>
+          </label>
+          <label>Impact today
+            <select id="impact" required><option value="">Choose impact</option><option>Low — little impact</option><option>Medium — noticeable</option><option>High — affects daily activities</option><option>Not sure</option></select>
+          </label>
+        </div>
+        <fieldset><legend>Areas of interest (choose any that fit)</legend>
+          <div class="choice-grid">
+            <label class="choice"><input type="checkbox" name="interest" value="Cycle health"> Cycle health</label>
+            <label class="choice"><input type="checkbox" name="interest" value="PCOS awareness"> PCOS awareness</label>
+            <label class="choice"><input type="checkbox" name="interest" value="Menopause"> Menopause</label>
+            <label class="choice"><input type="checkbox" name="interest" value="Emotional wellbeing"> Emotional wellbeing</label>
+            <label class="choice"><input type="checkbox" name="interest" value="Sleep and routine"> Sleep and routine</label>
+            <label class="choice"><input type="checkbox" name="interest" value="Travel and exploring"> Travel and exploring</label>
+            <label class="choice"><input type="checkbox" name="interest" value="Learning and hobbies"> Learning and hobbies</label>
+          </div>
+        </fieldset>
+        <label>Notes (optional) <textarea id="entryNotes" rows="3" maxlength="500" placeholder="A short demo note..."></textarea></label>
+        <p class="privacy-note">Please use fictional details in this demo. Avoid entering private or identifying health information.</p>
+        <button class="button" type="submit">Save demo entry</button>
+        <p class="status" id="trackerStatus" role="status"></p>
+      </form>
+      <div class="panel"><div class="panel-title-row"><h2>Your demo entries</h2><button class="button button-outline button-small" id="clearEntries" type="button">Clear entries</button></div><div id="entryList" class="entry-list"><p class="empty">No entries yet. Add a demo entry to see it here.</p></div></div>
+      <div class="page-actions"><a class="button button-outline" href="#home">← Home</a><a class="button" href="#routine">Next: Mini-game →</a></div>
+    </section>
+
+    <section class="page section-wrap" id="routine" data-title="Daily routine mini-game">
+      <div class="page-heading"><p class="eyebrow">02 · PLAY & LEARN</p><h1>A little daily-routine game</h1><p>No perfect answers here. Choose what feels closest to a typical day.</p></div>
+      <div class="panel">
+        <div class="quiz-top"><span class="pill">QUESTION <b id="routineCount">1</b> OF 4</span><span class="muted">Your choices are for reflection, not a health score.</span></div>
+        <div id="routineQuiz"></div>
+        <div class="quiz-controls"><button class="button button-outline" id="routineBack" type="button">← Back</button><button class="button" id="routineNext" type="button">Next question →</button></div>
+        <p class="status" id="routineStatus" role="status"></p>
+      </div>
+      <div class="panel">
+        <p class="eyebrow">QUICK HEALTH TOPIC QUIZ</p><h2>What would you like to learn about?</h2><p>Choose a topic to see a short educational note.</p>
+        <div class="topic-choices" id="topicChoices">
+          <button class="topic-button" data-topic="pcos">PCOS basics</button><button class="topic-button" data-topic="periods">Period changes</button><button class="topic-button" data-topic="menopause">Menopause</button><button class="topic-button" data-topic="wellbeing">Emotional wellbeing</button>
+        </div>
+        <div id="topicAnswer" class="answer-box" aria-live="polite">Choose a topic above to reveal a short note.</div>
+        <button class="button button-outline" id="saveQuiz" type="button">Save demo responses</button><p class="status" id="quizStatus" role="status"></p>
+      </div>
+      <div class="page-actions"><a class="button button-outline" href="#tracker">← Tracker</a><a class="button" href="#pcos">Next: PCOS awareness →</a></div>
+    </section>
+
+    <section class="page section-wrap" id="pcos" data-title="PCOS awareness">
+      <div class="page-heading"><p class="eyebrow">03 · LEARN & UNDERSTAND</p><h1>PCOS awareness</h1><p>Polycystic ovary syndrome (PCOS) is a hormonal condition. Symptoms and experiences can vary from person to person.</p></div>
+      <div class="panel"><h2>Signs someone may notice</h2><p>Select any signs you would like to learn more about. Selecting a sign does not mean you have PCOS.</p>
+        <div class="select-cards" id="pcosOptions">
+          <label class="select-card"><input type="checkbox" value="Periods that are irregular, infrequent or absent"><span class="card-icon">◷</span><b>Period changes</b><small>Periods that are irregular, infrequent or absent</small></label>
+          <label class="select-card"><input type="checkbox" value="Acne or oily skin"><span class="card-icon">✧</span><b>Skin changes</b><small>Acne or oily skin</small></label>
+          <label class="select-card"><input type="checkbox" value="More facial or body hair than usual"><span class="card-icon">❋</span><b>Hair growth</b><small>More facial or body hair than usual</small></label>
+          <label class="select-card"><input type="checkbox" value="Scalp hair thinning for some people"><span class="card-icon">☘</span><b>Scalp hair changes</b><small>Scalp hair thinning for some people</small></label>
+        </div>
+        <button class="button" id="savePcos" type="button">Save demo selection</button><p class="status" id="pcosStatus" role="status"></p>
+      </div>
+      <div class="notice"><h2>What you can do next</h2><p>If you are concerned about symptoms or menstrual changes, consider making an appointment with a qualified healthcare professional. They can assess your history and decide whether tests or further evaluation are appropriate.</p><p>A symptom list alone cannot confirm or rule out PCOS. Other conditions can cause similar symptoms.</p></div>
+      <div class="page-actions"><a class="button button-outline" href="#routine">← Mini-game</a><a class="button" href="#menopause">Next: Menopause care →</a></div>
+    </section>
+
+    <section class="page section-wrap" id="menopause" data-title="Menopause care">
+      <div class="page-heading"><p class="eyebrow">04 · HEALTH ACROSS LIFE STAGES</p><h1>Menopause care</h1><p>Menopause is a natural life stage. The timing and experience differ, and support is available.</p></div>
+      <div class="panel"><h2>Common changes</h2><p>Select any topics you want to understand better.</p>
+        <div class="select-cards" id="menoOptions">
+          <label class="select-card"><input type="checkbox" value="Changes in menstrual patterns"><span class="card-icon">◷</span><b>Menstrual patterns</b><small>Changes in menstrual patterns</small></label>
+          <label class="select-card"><input type="checkbox" value="Hot flashes or night sweats"><span class="card-icon">☼</span><b>Temperature changes</b><small>Hot flashes or night sweats</small></label>
+          <label class="select-card"><input type="checkbox" value="Sleep, concentration or mood changes"><span class="card-icon">☾</span><b>Sleep and mood</b><small>Sleep, concentration or mood changes</small></label>
+          <label class="select-card"><input type="checkbox" value="Vaginal or urinary changes"><span class="card-icon">❀</span><b>Other body changes</b><small>Vaginal or urinary changes</small></label>
+        </div>
+        <button class="button" id="saveMeno" type="button">Save demo selection</button><p class="status" id="menoStatus" role="status"></p>
+      </div>
+      <div class="notice"><h2>When to seek advice</h2><p>Talk with a healthcare professional if symptoms affect everyday life, you are unsure what is causing a change, or you have bleeding after menopause. They can discuss suitable assessment and support options.</p><p>This site provides general education, not personalised treatment advice.</p></div>
+      <div class="page-actions"><a class="button button-outline" href="#pcos">← PCOS awareness</a><a class="button" href="#wellbeing">Next: Wellbeing →</a></div>
+    </section>
+
+    <section class="page section-wrap" id="wellbeing" data-title="Emotional wellbeing">
+      <div class="page-heading"><p class="eyebrow">05 · A MOMENT FOR YOURSELF</p><h1>Emotional wellbeing</h1><p>A simple check-in can help you pause and notice how today feels. There are no right or wrong answers.</p></div>
+      <form class="panel" id="wellbeingForm">
+        <h2>How are you feeling today?</h2>
+        <div class="mood-options">
+          <label class="mood-option"><input type="radio" name="mood" value="Calm" required><span>🌿</span><b>Calm</b></label>
+          <label class="mood-option"><input type="radio" name="mood" value="Okay"><span>☁️</span><b>Okay</b></label>
+          <label class="mood-option"><input type="radio" name="mood" value="Stressed"><span>🌧️</span><b>Stressed</b></label>
+          <label class="mood-option"><input type="radio" name="mood" value="Low energy"><span>🌱</span><b>Low energy</b></label>
+          <label class="mood-option"><input type="radio" name="mood" value="Energized"><span>☀️</span><b>Energized</b></label>
+        </div>
+        <label class="need-label">What is the one thing you need today? <span class="required">*</span><textarea id="todayNeed" rows="4" required maxlength="500" placeholder="Write a few words about what might support you today..."></textarea></label>
+        <button class="button" type="submit">Save check-in</button><p class="status" id="wellbeingStatus" role="status"></p>
+      </form>
+      <div class="panel"><h2>Recent demo check-in</h2><div id="latestCheckin" class="answer-box">No check-in saved yet.</div></div>
+      <div class="page-actions"><a class="button button-outline" href="#menopause">← Menopause care</a><a class="button" href="#summary">Next: Health summary →</a></div>
+    </section>
+
+    <section class="page section-wrap" id="summary" data-title="Health summary">
+      <div class="page-heading"><p class="eyebrow">06 · YOUR RECORDS AT A GLANCE</p><h1>Your BloomWithin summary</h1><p>Review your demo entries in one place. This is not a medical record.</p></div>
+      <div class="summary-grid">
+        <article class="summary-card"><span class="summary-icon">✎</span><h2>Symptom entries</h2><strong id="summaryEntryCount">0</strong><p>demo entries saved</p></article>
+        <article class="summary-card"><span class="summary-icon">✿</span><h2>PCOS topics</h2><strong id="summaryPcosCount">0</strong><p>topics selected</p></article>
+        <article class="summary-card"><span class="summary-icon">☼</span><h2>Menopause topics</h2><strong id="summaryMenoCount">0</strong><p>topics selected</p></article>
+        <article class="summary-card"><span class="summary-icon">♡</span><h2>Wellbeing check-ins</h2><strong id="summaryCheckinCount">0</strong><p>check-ins saved</p></article>
+      </div>
+      <div class="panel"><div class="panel-title-row"><h2>Symptom entries</h2><button class="button button-outline button-small" id="printSummary" type="button">Print summary</button></div><div id="summaryEntries"></div></div>
+      <div class="panel"><h2>Learning choices</h2><div id="summaryLearning" class="answer-box">No learning choices saved yet.</div></div>
+      <div class="panel"><h2>Wellbeing check-ins</h2><div id="summaryCheckins" class="entry-list">No check-ins saved yet.</div></div>
+      <p class="privacy-note">Demo information is stored locally in this browser. It may be lost if browser data is cleared, and it does not sync to other devices.</p>
+      <div class="page-actions"><a class="button button-outline" href="#wellbeing">← Wellbeing</a><a class="button" href="#remo">Next: Meet Remo →</a></div>
+    </section>
+
+    <section class="page section-wrap" id="remo" data-title="Remo demo assistant">
+      <div class="page-heading"><p class="eyebrow">07 · LEARN, REFLECT & ASK</p><h1>Meet Remo <span class="remo-flower">✿</span></h1><p>A gentle educational demo assistant for health topics and everyday reflection.</p></div>
+      <div class="chat-panel">
+        <div class="chat-header"><div class="remo-avatar">R</div><div><b>Remo</b><small>BloomWithin demo assistant · preset responses</small></div><span class="online-dot"></span></div>
+        <div class="chat-messages" id="chatMessages" aria-live="polite"><div class="bubble assistant">Hi, I'm Remo 🌿 You can ask me about PCOS awareness, menopause, tracking symptoms, or ways to reflect on your feelings. I'm here to share general information and supportive ideas.</div></div>
+        <div class="suggestions"><button type="button" data-prompt="What is PCOS?">What is PCOS?</button><button type="button" data-prompt="What changes can happen during menopause?">Menopause changes</button><button type="button" data-prompt="I feel stressed today">I feel stressed</button><button type="button" data-prompt="How can I prepare for a health appointment?">Preparing for an appointment</button></div>
+        <form id="chatForm" class="chat-input-row"><label class="sr-only" for="chatInput">Ask Remo a question</label><input id="chatInput" maxlength="400" placeholder="Ask about a health topic or share a reflection..." required><button class="button" type="submit">Send ↑</button></form>
+      </div>
+      <div class="notice"><p><b>A gentle reminder:</b> Remo uses preset responses and is not connected to a live AI model or clinician. It cannot diagnose or provide personalised treatment. Avoid sharing private identifying or health information. For personal concerns, speak with a qualified healthcare professional.</p></div>
+      <div class="page-actions"><a class="button button-outline" href="#summary">← Health summary</a><a class="button" href="#home">Back to home ↑</a></div>
+    </section>
+  </main>
+  <footer><div class="footer-brand">✿ BloomWithin</div><p>You deserve care and clear information.</p><small>Educational demo only. No diagnosis, treatment or emergency service is provided.</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
