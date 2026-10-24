@@ -1,2 +1,2 @@
 # BloomWithin
-✨Bloom Within — Where Every Woman Finds Her Space to Grow. A thoughtfully designed digital space celebrating women's wellness, self-love, and personal growth, inspiring every woman to embrace her journey, discover her strength, and bloom into her fullest potential. 
+Bloom Within — Your Journey, Your Growth, Your Power. A women's wellness platform featuring PCOS awareness, menopause support, mental and emotional well-being, self-care, and personal growth through an interactive, user-friendly experience. Built with HTML, CSS, and JavaScript.
